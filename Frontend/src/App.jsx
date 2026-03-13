@@ -1,17 +1,21 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Button } from "./components/ui/button";
-import LandingPage from "./pages/LandingPage";
-import DashBoard from "./pages/DashBoard";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MotionProvider from "./contexts/MotionProviders";
+
+import LandingPage from "./pages/LandingPage";
+import LoginPage from "./pages/LoginPage";
+import DashBoard from "./pages/DashBoard";
 
 function App() {
     return (
         <BrowserRouter>
             <MotionProvider>
-                <Routes>
-                    <Route path="landing-page" element={<LandingPage />} />
-                    <Route path="dashboard" element={<DashBoard />} />
-                </Routes>
+                {(location) => (
+                    <Routes location={location} key={location.pathname}>
+                        <Route path="/" element={<LandingPage />} />
+                        <Route path="/login" element={<LoginPage />} />
+                        <Route path="/dashboard" element={<DashBoard />} />
+                    </Routes>
+                )}
             </MotionProvider>
         </BrowserRouter>
     );

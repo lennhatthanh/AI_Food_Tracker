@@ -40,9 +40,11 @@ export default function LandingPage() {
                         <a href="#works" className="font-medium">
                             How it works
                         </a>
-                        <Button className="text-black text-[16px] font-bold px-7 hover:bg-primary/90 hover:scale-105">
-                            Login
-                        </Button>
+                        <Link to={"login"}>
+                            <Button className="text-black text-[16px] font-bold px-7 hover:bg-primary/90 hover:scale-105">
+                                Login
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </header>
