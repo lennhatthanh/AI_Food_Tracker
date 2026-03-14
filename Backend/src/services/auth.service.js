@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
-import UserModel from "../models/user.model";
-import { generateToken } from "../utils/generateToken";
+import UserModel from "../models/user.model.js";
+import { generateToken } from "../utils/generateToken.js";
 
 export const refershTokenService = async (refreshTokenFromCookie) => {
     if (!refreshTokenFromCookie) {

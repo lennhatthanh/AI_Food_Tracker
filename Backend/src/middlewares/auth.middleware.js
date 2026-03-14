@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
-import UserModel from "../models/user.model";
+import UserModel from "../models/user.model.js";
 import dotenv from "dotenv";
-import { error } from "../utils/response";
+import { error } from "../utils/response.js";
 dotenv.config();
 
 export const protect = async (req, res, next) => {

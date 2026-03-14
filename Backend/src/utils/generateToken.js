@@ -4,10 +4,10 @@ dotenv.config();
 
 export const generateToken = (id) => {
     const accessToken = jwt.sign({ id }, process.env.JWT_ACCESS_SECRET, {
-        expiresIn: process.env.JWT_ACCESS_EXPIRES,
+        expiresIn: process.env.JWT_ACCESS_EXPIRE,
     });
     const refreshToken = jwt.sign({ id }, process.env.JWT_REFRESH_SECRET, {
-        expiresIn: process.env.JWT_REFRESH_EXPIRES,
+        expiresIn: process.env.JWT_REFRESH_EXPIRE,
     });
     return { accessToken, refreshToken };
 };

@@ -1,8 +1,8 @@
-import admin from "../config/firebase";
-import UserModel from "../models/user.model";
-import { logoutService, refershTokenService } from "../services/auth.service";
-import { generateToken } from "../utils/generateToken";
-import { error, success } from "../utils/response";
+import admin from "../config/firebase.js";
+import UserModel from "../models/user.model.js";
+import { logoutService, refershTokenService } from "../services/auth.service.js";
+import { generateToken } from "../utils/generateToken.js";
+import { error, success } from "../utils/response.js";
 
 export const COOKIE_OPTIONS = {
     httpOnly: true,
@@ -41,7 +41,7 @@ export const googleLoginController = async (req, res) => {
                 avatar: user.avatar,
             },
         });
-    } catch (error) {
+    } catch (errorRes) {
         error(res, errorRes.message);
     }
 };
