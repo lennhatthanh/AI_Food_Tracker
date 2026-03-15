@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function DashBoard() {
     return (
-        <Link to="/landing-page">
+        <Link to="/">
             <Button>DashBoard</Button>
         </Link>
     );
